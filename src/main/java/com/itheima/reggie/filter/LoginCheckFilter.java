@@ -1,6 +1,7 @@
 package com.itheima.reggie.filter;
 
 import com.alibaba.fastjson.JSON;
+import com.itheima.reggie.common.BaseContext;
 import com.itheima.reggie.common.R;
 import com.itheima.reggie.entity.Employee;
 import com.itheima.reggie.service.EmployeeService;
@@ -60,6 +61,11 @@ public class LoginCheckFilter implements Filter {
 
         if(request.getSession().getAttribute("employee")!=null){
             log.info("用户已登录，用户ID为:{}",request.getSession().getAttribute("employee"));
+
+            Long empId = (Long) request.getSession().getAttribute("employee");
+            BaseContext.setCurrentId(empId);
+
+
             filterChain.doFilter(request,response);
             return;
         }
