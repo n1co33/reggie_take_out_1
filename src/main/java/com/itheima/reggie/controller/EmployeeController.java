@@ -63,7 +63,7 @@ public class EmployeeController {
      */
     @PostMapping("/logout")
     public R<String> logout(HttpServletRequest request){
-        //清理Session中爆粗的呢当前员工id
+        //清理Session中当前员工id
         request.getSession().removeAttribute("employee");
         return R.success("退出成功");
     }
