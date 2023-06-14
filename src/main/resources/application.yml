@@ -18,3 +18,5 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: ASSIGN_ID
+reggie:
+  path: C:\Users\user\OneDrive\デスクトップ\reggie项目\1 瑞吉外卖项目\资料\pic\
