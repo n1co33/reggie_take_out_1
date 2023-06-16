@@ -92,6 +92,56 @@ public class DishController {
      */
     @GetMapping("/{id}")
     public R<DishDto> get(@PathVariable Long id){
-        return null;
+        DishDto dishDto = dishService.getByIdWithFlavor(id);
+        return R.success(dishDto);
+    }
+    /**
+     * 修改菜品
+     * @param dishDto
+     * @return
+     */
+    @PutMapping
+    public R<String> update(@RequestBody DishDto dishDto){
+        log.info(dishDto.toString());
+        dishService.updateWithFlavor(dishDto);
+        return R.success("新增菜品成功");
+    }
+
+    /**
+     * 根据条件查询菜品数据
+     * @param dish
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Dish>> list(Dish dish){
+        //构建查询条件
+        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(dish.getCategoryId() != null,Dish::getCategoryId,dish.getCategoryId());
+        //添加条件，查询状态为1的菜品（起售）
+        queryWrapper.eq(Dish::getStatus,1);
+
+        //添加排序条件
+        queryWrapper.orderByAsc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
+
+        List<Dish> list = dishService.list(queryWrapper);
+        return R.success(list);
+    }
+    @PostMapping(path = {"/status/0", "/status/1"})
+    public R<String> updd(@RequestParam List<Long> ids){
+//        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
+//        queryWrapper.eq(Dish::getId,ids);
+//        List<Dish> list = dishService.list(queryWrapper);
+//        list.stream().map((item) ->{
+//            if(item.getStatus() == 1){
+//                item.setStatus(0);
+//            }else {
+//                item.setStatus(1);
+//
+//            }
+//            return item;
+//        }).collect(Collectors.toList());
+//        dishService.saveBatch(list);
+        dishService.gengXin(ids);
+        return R.success("菜品状态修改成功");
     }
 }
