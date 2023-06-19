@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4be09db6-65c0-4229-b7ad-5e1b9a4b7acc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/Utils/SMSUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/Utils/ValidateCodeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +29,10 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,13 +78,13 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\IdeaProjects\reggie_take_out\src\main\java\com\itheima\reggie\Utils" />
-      <recent name="C:\Users\user\IdeaProjects\reggie_take_out\src\main\java\com\itheima\reggie\dto" />
       <recent name="C:\Users\user\IdeaProjects\reggie_take_out\src\main\java\com\itheima\reggie\entity" />
+      <recent name="C:\Users\user\IdeaProjects\reggie_take_out\src\main\java\com\itheima\reggie\dto" />
       <recent name="C:\Users\user\IdeaProjects\reggie_take_out\src\main\resources\backend\page\demo" />
       <recent name="C:\Users\user\IdeaProjects\reggie_take_out\src\main\java\com\itheima\reggie\common" />
     </key>
@@ -188,7 +196,8 @@
       <workItem from="1686112176091" duration="1619000" />
       <workItem from="1686113870895" duration="20910000" />
       <workItem from="1686535460811" duration="30734000" />
-      <workItem from="1686789622534" duration="30403000" />
+      <workItem from="1686789622534" duration="34638000" />
+      <workItem from="1686904866547" duration="1310000" />
     </task>
     <servers />
   </component>
